@@ -1,15 +1,19 @@
 README.md
-The repo holds test data for the 'End Goal' goal managemet approach.
-Ideailly the various versions of the software in different laguages use the 
-same structure, or at least have compatable rules for importig and exporting
-to a neutral strucure.
+Test data for the 'End Goal' goal management approach across various 
+language imlementations.
+
+# Overview
+The repo holds test data for the 'End Goal' goal management approach.
+Ideally the various versions of the software in different languages use the 
+same structure, or at least have compatible rules for importing and exporting
+to a neutral structure.
 
 Work is needed to update the variations below to match the eng structure, 
-which is curently he latest.
+which is currently the latest.
 
 In particular, the Rust eng version uses a Mongo sty;le Object ID for the
 Goal Id, Objective IDF, and task Id.  Nothing adequately supports the 
-optional layer of "SubObjective" in the hierachy.  
+optional layer of "SubObjective" in the hierarchy.  
 
 # Rust eng command line
 
@@ -17,13 +21,13 @@ optional layer of "SubObjective" in the hierachy.
 The swift version might not be using a flat OID scheme to generate IDs.
 
 ## In this scheme:
-Subobjectives are not supported.
-Attributes use camel cas instead of snake case names 
+SubObjectives are not supported.
+Attributes use camel case instead of snake case names 
  - (todoMaxTask: vs todo_max_tasks:)
 
 
 # React Task Blotter 
-The JS version uses a hieracical path style ID where the task ID include the
+The JS version uses a hierarchical path style ID where the task ID include the
 parent objective ID and Goal ID.
 
 
@@ -36,19 +40,17 @@ EffortDomain is called UserDomainT
  - uses an attribute sprint_max_tasks instead of todo_max_tasks:
 Goals are called Endeavors.
 Objectives are called stories.
-Subobjectives are not supported.
+SubObjectives are not supported.
 Tasks are included. 
-the in_progress value in the status enum uses a space instead of an underscore.
+The in_progress value in the status enum uses a space instead of an underscore.
 
 
 # Python Tlog command line
-Has a very human editable markdown based syntac that ia great for creating tasks
+Has a very human editable markdown based syntax that is great for creating tasks
 in file.
 ## In this scheme:
 Goals are called Endeavors.
 Objectives are called stories.
-Subobjectives are not supported.
+SubObjectives are not supported.
 Tasks are included. 
-the in_progress value in the status enum uses a space instead of an underscore.
-
-
+The in_progress value in the status enum uses a space instead of an underscore.
